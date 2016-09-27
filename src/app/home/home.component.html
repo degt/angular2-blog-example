@@ -1,0 +1,12 @@
+<div class="col-md-6 col-md-pull-3">
+    <h2>Posts ({{ posts?.length }})</h2>
+    <div *ngFor="let post of posts">
+        <div class="card ">
+            <div class="card-block">
+                <h4 class="card-title">{{ post.title }}</h4>
+                <p class="card-text">{{ post.body }}</p>
+                <a [routerLink]="['/post', post.id]" class="card-link">Read more</a>
+            </div>
+        </div>
+    </div>
+</div>
